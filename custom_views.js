@@ -45,13 +45,13 @@ const multiSliderRatings_custom_view_constructor = function(config) {
                 response2 = $("#response2");
 
                 // flags to check if sliders have been touched
-                var response_flags = [0,0];
+                var response_flags = [0, 0];
 
                 const display_button_checker = function(slider_number) {
                     response_flags[slider_number] = 1;
                     if (_.min(response_flags) == 1) {
                         $("#next").removeClass("babe-nodisplay");
-                    } 
+                    }
                 };
 
                 // checks if the slider has been changed
@@ -107,8 +107,7 @@ const multiSliderRatings_custom_view_constructor = function(config) {
             startingTime = Date.now();
 
             // creates the DOM of the trial view
-            babeUtils.view.createTrialDOM(
-                {
+            babeUtils.view.createTrialDOM({
                     pause: config.pause,
                     fix_duration: config.fix_duration,
                     stim_duration: config.stim_duration,
