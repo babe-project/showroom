@@ -175,6 +175,13 @@ const beginRealKeyPress = babeViews.begin({
     buttonText: 'Begin'
 });
 
+const instructionsCustomView = babeViews.instructions({
+    trials: 1,
+    name: 'instructions_custom_view',
+    title: 'Custom views',
+    text: `Next you will see an example of a custom view. While _babe has several templates to create views, quite soon you will want to have more flexibility to design exactly what you want to have in your experiment. For example, _babe defines a Slider Rating task, but these tasks have only one slider. So here we define a custom view which has two sliders. The view is defined in a separate file called "custom_views.js". More information on the creation of custom views can be found <a href="here">here (fix link!)</a>.`
+});
+
 const instructionsPostTest = babeViews.instructions({
     trials: 1,
     name: 'instructions_post_test',

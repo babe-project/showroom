@@ -12,8 +12,6 @@ $("document").ready(function() {
         views_seq: [
             intro,
 
-            //hello,
-
             instructions,
             practiceForcedChoice,
 
@@ -41,6 +39,9 @@ $("document").ready(function() {
             keyPressPractice,
             beginRealKeyPress,
             keyPressMain,
+
+            instructionsCustomView,
+            multiSliderCustom,
 
             instructionsPostTest,
             postTest,
