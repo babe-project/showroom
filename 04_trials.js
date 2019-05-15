@@ -1,5 +1,8 @@
-const practice_trials = {
-    forcedChoice: [
+// In this file you can specify the trial data for your experiment
+
+
+const part_one_trial_info = {
+    forced_choice: [
         {
             question: "What's on the bread?",
             picture: "images/question_mark_02.png",
@@ -13,7 +16,27 @@ const practice_trials = {
             option2: "rainbow"
         }
     ],
-}
+};
+
+const part_two_trial_info = {
+    multi_dropdown: [
+        {
+            sentence_chunk_1: "Some of the",
+            sentence_chunk_2: "are",
+            sentence_chunk_3: "today.",
+            choice_options_1: ["cats", "dogs"],
+            choice_options_2: ["happy", "hungry", "sad"]
+        },
+        {
+            sentence_chunk_1: "All of the",
+            sentence_chunk_2: "will be",
+            sentence_chunk_3: "tomorrow.",
+            choice_options_1: ["cats", "dogs"],
+            choice_options_2: ["happy", "hungry", "sad"]
+        }
+    ]
+};
+
 
 const main_trials = {
     dropdownChoice: [
@@ -180,69 +203,6 @@ const main_trials = {
         }
     ],
     keyPress: {
-
-        practice: [
-            {
-                key1: "f",
-                key2: "j",
-                f: "circle",
-                j: "square",
-                expected: "circle",
-                canvas: {
-                    focalColor: 'blue',
-                    focalShape: 'circle',
-                    focalNumber: 1,
-                    sort: 'random',
-                    elemSize: 100,
-                    total: 1
-                }
-            },
-            {
-                key1: "f",
-                key2: "j",
-                f: "circle",
-                j: "square",
-                expected: "square",
-                canvas: {
-                    focalColor: 'green',
-                    focalShape: 'square',
-                    focalNumber: 1,
-                    sort: 'random',
-                    elemSize: 100,
-                    total: 1
-                }
-            },
-            {
-                key1: "f",
-                key2: "j",
-                f: "circle",
-                j: "square",
-                expected: "square",
-                canvas: {
-                    focalColor: 'blue',
-                    focalShape: 'square',
-                    focalNumber: 1,
-                    sort: 'random',
-                    elemSize: 100,
-                    total: 1
-                }
-            },
-            {
-                key1: "f",
-                key2: "j",
-                f: "circle",
-                j: "square",
-                expected: "circle",
-                canvas: {
-                    focalColor: 'red',
-                    focalShape: 'circle',
-                    focalNumber: 1,
-                    sort: 'random',
-                    elemSize: 100,
-                    total: 1
-                }
-            }
-        ],
         main: [
             {
                 key1: "f",
@@ -404,4 +364,4 @@ const main_trials = {
             picture2: "images/question_mark_01.png"
         }
     ],
-}
+};
