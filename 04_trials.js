@@ -5,13 +5,19 @@ const part_one_trial_info = {
     forced_choice: [
         {
             question: "What's on the bread?",
-            picture: "images/question_mark_02.png",
+            picture: "images/wide.jpg",
             option1: 'jam',
             option2: 'ham'
         },
         {
             question: "What's the weather like?",
-            picture: "images/weather.jpg",
+            picture: "images/small.png",
+            option1: "shiny",
+            option2: "rainbow"
+        },
+        {
+            question: "What's the weather like today?",
+            picture: "images/high.jpg",
             option1: "shiny",
             option2: "rainbow"
         }
@@ -287,6 +293,7 @@ const main_trials = {
             sentence: "all | the squares | are | red | the in the picture.",
             option1: "Yes",
             option2: "No",
+            wordPos: 'same',
             canvas: {
                 focalColor: 'blue',
                 focalShape: 'circle',
@@ -304,6 +311,7 @@ const main_trials = {
             option1: "Yes",
             helpText: 'Press Space (this text can be set)',
             option2: "No",
+            underline: 'none',
             canvas: {
                 focalColor: 'green',
                 focalShape: 'triangle',
@@ -321,6 +329,7 @@ const main_trials = {
             option1: "Yes",
             helpText: 'Press Space (this text can be changed)',
             option2: "No",
+            underline: 'sentence',
             canvas: {
                 focalColor: 'green',
                 focalShape: 'square',
