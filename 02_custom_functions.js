@@ -77,15 +77,15 @@ const myEvents = {
 const multi_dropdown_gens = {
     // A generator for our view template
     stimulus_container_gen: function(config, CT){
-        return `<div class='babe-view'>
-                <h1 class='babe-view-title'>${config.title}</h1>
-                <p class='babe-view-question babe-view-qud'>${config.data[CT].QUD}</p>
-                <p class='babe-response-keypress-header' id = 'reminder'></p>
+        return `<div class='magpie-view'>
+                <h1 class='magpie-view-title'>${config.title}</h1>
+                <p class='magpie-view-question magpie-view-qud'>${config.data[CT].QUD}</p>
+                <p class='magpie-response-keypress-header' id = 'reminder'></p>
                 </div>`;
     },
     // A generator for the answer container
     answer_container_gen: function (config, CT) {
-        return `<div class='babe-view-answer-container babe-response-dropdown'>
+        return `<div class='magpie-view-answer-container magpie-response-dropdown'>
                 ${config.data[CT].sentence_chunk_1}
                 <select id='response1' name='answer_1'>
                     <option disabled selected></option>
@@ -101,15 +101,15 @@ const multi_dropdown_gens = {
                 </select>
                 ${config.data[CT].sentence_chunk_3}
                 </p>
-                <button id='next' class='babe-view-button babe-nodisplay'>Next</button>
+                <button id='next' class='magpie-view-button magpie-nodisplay'>Next</button>
             </div>`;
     },
     // A generator for the enable response function
-    handle_response_function: function (config, CT, babe, answer_container_generator, startingTime) {
+    handle_response_function: function (config, CT, magpie, answer_container_generator, startingTime) {
         let response1;
         let response2;
 
-        $(".babe-view").append(answer_container_generator(config, CT));
+        $(".magpie-view").append(answer_container_generator(config, CT));
 
         response1 = $("#response1");
         response2 = $("#response2");
@@ -120,7 +120,7 @@ const multi_dropdown_gens = {
         const display_button_checker = function(response_number) {
             response_flags[response_number] = 1;
             if (_.min(response_flags) === 1) {
-                $("#next").removeClass("babe-nodisplay");
+                $("#next").removeClass("magpie-nodisplay");
             }
         };
 
@@ -151,10 +151,10 @@ const multi_dropdown_gens = {
                 RT: RT
             };
 
-            trial_data = babeUtils.view.save_config_trial_data(config.data[CT], trial_data);
+            trial_data = magpieUtils.view.save_config_trial_data(config.data[CT], trial_data);
 
-            babe.trial_data.push(trial_data);
-            babe.findNextView();
+            magpie.trial_data.push(trial_data);
+            magpie.findNextView();
         });
     }
 

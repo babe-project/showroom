@@ -15,12 +15,12 @@
     * title: string - the title of this view
 
 * More about the properties and functions of the wrapping views -
- * https://github.com/babe-project/babe-project/blob/master/docs/views.md#wrapping-views-properties
+ * https://github.com/magpie-project/magpie-project/blob/master/docs/views.md#wrapping-views-properties
 
 */
 
 // Every experiment should start with an intro view. Here you can welcome your participants and tell them what the experiment is about
-const intro = babeViews.view_generator("intro",{
+const intro = magpieViews.view_generator("intro",{
     trials: 1,
     name: 'intro',
     // If you use JavaScripts Template String `I am a Template String`, you can use HTML <></> and javascript ${} inside
@@ -31,12 +31,12 @@ const intro = babeViews.view_generator("intro",{
             about the experiment. You can flip a coin for every participant, you are in the <strong>${coin}</strong> group.
             <br />
             <br />
-            This mock up experiment is a showcase of the functionality of babe.`,
+            This mock up experiment is a showcase of the functionality of magpie.`,
    buttonText: 'Begin the experiment'    
 });
 
 // For most tasks, you need instructions views
-const instructions = babeViews.view_generator("instructions",{
+const instructions = magpieViews.view_generator("instructions",{
     trials: 1,
     name: 'instrucions',
     title: 'General Instructions',
@@ -44,12 +44,12 @@ const instructions = babeViews.view_generator("instructions",{
             <br />
             <br />
             First you will go through two practice trials.
-            The practice trial view uses babe's 
-            <a href='https://github.com/babe-project/babe-project/blob/master/docs/images/views_samples/view_fc.png'>forced choice trial view</a>.`,
+            The practice trial view uses magpie's 
+            <a href='https://github.com/magpie-project/magpie-project/blob/master/docs/images/views_samples/view_fc.png'>forced choice trial view</a>.`,
     buttonText: 'to the practice trial'
 });
 
-const instructions_canvas = babeViews.view_generator("instructions",{
+const instructions_canvas = magpieViews.view_generator("instructions",{
     trials: 1,
     name: 'instructions_canvas',
     title: 'Generate Shapes',
@@ -57,15 +57,15 @@ const instructions_canvas = babeViews.view_generator("instructions",{
             <br />
             <br />
             Next you will see a sample of a 
-            <a href='https://github.com/babe-project/babe-project/blob/master/docs/images/views_samples/view_dc.png'>dropdown choice view</a>
+            <a href='https://github.com/magpie-project/magpie-project/blob/master/docs/images/views_samples/view_dc.png'>dropdown choice view</a>
             with 3 trials that have pictures of shapes created with 
-            <a href='https://github.com/babe-project/babe-project/blob/master/docs/canvas.md'>babe canvas</a>.
+            <a href='https://github.com/magpie-project/magpie-project/blob/master/docs/canvas.md'>magpie canvas</a>.
             <br />
             <br />`,
     buttonText: 'Start the experiment'
 });
 
-const instructions_loop = babeViews.view_generator("instructions",{
+const instructions_loop = magpieViews.view_generator("instructions",{
     trials: 1,
     name: 'instructions_loop',
     title: 'Loop through several views',
@@ -73,14 +73,14 @@ const instructions_loop = babeViews.view_generator("instructions",{
             <br />
             <br />
             Next you will see a sample of looping through 
-            <a href='https://github.com/babe-project/babe-project/blob/master/docs/images/views_samples/view_ss.png'>sentence choice</a>
-            and <a href='https://github.com/babe-project/babe-project/blob/master/docs/images/views_samples/view_ss.png'>image seleciton</a> task twice.
+            <a href='https://github.com/magpie-project/magpie-project/blob/master/docs/images/views_samples/view_ss.png'>sentence choice</a>
+            and <a href='https://github.com/magpie-project/magpie-project/blob/master/docs/images/views_samples/view_ss.png'>image seleciton</a> task twice.
             <br />
             <br />`,
     buttonText: 'Start the loop sample'
 });
 
-const instructions_lifecycle = babeViews.view_generator("instructions",{
+const instructions_lifecycle = magpieViews.view_generator("instructions",{
     trials: 1,
     name: 'instructions_lifecycle',
     title: 'Trial Life Cycle',
@@ -88,7 +88,7 @@ const instructions_lifecycle = babeViews.view_generator("instructions",{
             <br />
             <br />
             All the views so far showed the stimulus (if there was such), the question and expected a response at the moment of creation.
-            However, in the background all trial views in babe, go through a life cycle with the following stages:
+            However, in the background all trial views in magpie, go through a life cycle with the following stages:
             <br />
             <br />
             <b>pause</b>
@@ -106,7 +106,7 @@ const instructions_lifecycle = babeViews.view_generator("instructions",{
             everything in the trial views was shown at once.
             <br />
             <br />
-            Next you will see a <a href='https://github.com/babe-project/babe-project/blob/master/docs/images/views_samples/view_sr.png'>
+            Next you will see a <a href='https://github.com/magpie-project/magpie-project/blob/master/docs/images/views_samples/view_sr.png'>
             Slider Rating task</a>
             that has a pause of 500 ms, fixation point of 1000 ms and the stimulus appears on the screen for 1500 ms. 
             After the stimulus hides, the response
@@ -114,25 +114,25 @@ const instructions_lifecycle = babeViews.view_generator("instructions",{
             <br />
             <br />
             After the rating scale task you will see a 
-            <a href='https://github.com/babe-project/babe-project/blob/master/docs/images/views_samples/view_ti.png'>Textbox Input task</a>
+            <a href='https://github.com/magpie-project/magpie-project/blob/master/docs/images/views_samples/view_ti.png'>Textbox Input task</a>
             that has a pause of 500 ms and a stimulus that hides when 'SPACE' is pressed.`,
     buttonText: 'Start trial life cycle sample'
 });
 
-const instructions_hooks = babeViews.view_generator("instructions",{
+const instructions_hooks = magpieViews.view_generator("instructions",{
     trials: 1,
     name: 'instructions_hooks',
     title: 'Hooks and Local Functions',
     text:   `This is another instructions view.
             <br />
             <br />
-            So far all the trial views called functions that came with the babe package. However, there
+            So far all the trial views called functions that came with the magpie package. However, there
             is also an option to use local functions (defined by you) and hook them
             to a trial view.
             <br />
             <br />
             Next you will see a sample of a 
-            <a href='https://github.com/babe-project/babe-project/blob/master/docs/images/views_samples/view_rc.png'>Rating Scale task</a>
+            <a href='https://github.com/magpie-project/magpie-project/blob/master/docs/images/views_samples/view_rc.png'>Rating Scale task</a>
             that uses a locally defined function to tell the participant how long they looked at the stimulus.
             <br />
             <br />
@@ -145,7 +145,7 @@ const instructions_hooks = babeViews.view_generator("instructions",{
 });
 
 // warns the real experiment will begin
-const instructions_progress_bar = babeViews.view_generator("instructions",{
+const instructions_progress_bar = magpieViews.view_generator("instructions",{
     trials: 1,
     name: 'instructions_progress_bar',
     title: 'Self-paced reading tasks with a Progress Bar',
@@ -154,20 +154,20 @@ const instructions_progress_bar = babeViews.view_generator("instructions",{
             <br />
             Next you will see two examples of a Self-Paced Reading task
             <br />
-            1. <a href='https://github.com/babe-project/babe-project/blob/master/docs/views.md#self-paced-reading-with-forced-choice-response'>
+            1. <a href='https://github.com/magpie-project/magpie-project/blob/master/docs/views.md#self-paced-reading-with-forced-choice-response'>
             Self-Paced Reading with Forced Choice response task</a>
             <br />
-            2. <a href='https://github.com/babe-project/babe-project/blob/master/docs/views.md#self-paced-reading-task-with-rating-scale-response'>
+            2. <a href='https://github.com/magpie-project/magpie-project/blob/master/docs/views.md#self-paced-reading-task-with-rating-scale-response'>
             Self-Paced Reading with Rating Scale task</a>
             <br />
             <br />
             The trial views have a progress bar in the top right corner of the screen. 
-            You can <a href='https://github.com/babe-project/babe-project#progress-bar'>
+            You can <a href='https://github.com/magpie-project/magpie-project#progress-bar'>
             use a progress bar</a> in your experiment with a simple configuration.`,
     buttonText: 'Start the SPR tasks'
 });
 
-const instructions_experiment = babeViews.view_generator("instructions",{
+const instructions_experiment = magpieViews.view_generator("instructions",{
     trials: 1,
     name: 'instructions_experiment',
     title: 'Key Press',
@@ -175,7 +175,7 @@ const instructions_experiment = babeViews.view_generator("instructions",{
             <br />
             <br />
             Next you will see a small 
-            <a href='https://github.com/babe-project/babe-project/blob/master/docs/images/views_samples/view_kp.png'>Key Press task</a>
+            <a href='https://github.com/magpie-project/magpie-project/blob/master/docs/images/views_samples/view_kp.png'>Key Press task</a>
              experiment sample.
             <br />
             <br />
@@ -183,7 +183,7 @@ const instructions_experiment = babeViews.view_generator("instructions",{
             another Key Press task functioning as the 'real' main trial.
             <br />
             <br />
-            On the screen you will see a square or a circle on a random position (generated with babe's canvas). Your task is to press:
+            On the screen you will see a square or a circle on a random position (generated with magpie's canvas). Your task is to press:
             <br />
             <br />
             <b>F</b> for <b>circle</b>
@@ -192,7 +192,7 @@ const instructions_experiment = babeViews.view_generator("instructions",{
     buttonText: 'Start the key press task'
 });
 
-const begin_real_key_press = babeViews.view_generator("begin",{
+const begin_real_key_press = magpieViews.view_generator("begin",{
     trials: 1,
     name: 'begin_key_press',
     title: 'Begin the real experiment',
@@ -200,31 +200,31 @@ const begin_real_key_press = babeViews.view_generator("begin",{
     buttonText: 'Begin'
 });
 
-const instructions_customized_views = babeViews.view_generator("instructions",{
+const instructions_customized_views = magpieViews.view_generator("instructions",{
     trials: 1,
     name: 'instructions_customized_view',
     title: 'Customized views',
-    text: `Next you will see an example of a customized view. While _babe has several templates to create views, 
+    text: `Next you will see an example of a customized view. While _magpie has several templates to create views, 
 quite soon you will want to have more flexibility to design exactly what you want to have in your experiment. 
-For example, _babe defines a DropDown task, but these tasks have only one DropDown Menu. 
+For example, _magpie defines a DropDown task, but these tasks have only one DropDown Menu. 
 So here we define a custom view which has two dropdown menus. The stimulus_container_generator, answer_container_generator and
  handle_response_function functions are defined in a separate file called "02_custom_functions.js". Afterwards, you will
  see two customized forced choice views, that only change the stimulus container or the answer_container.
 More information on the creation of customized views can be found <a href="here">here (fix link!)</a>.`
 });
 
-const instructions_custom_view = babeViews.view_generator("instructions",{
+const instructions_custom_view = magpieViews.view_generator("instructions",{
     trials: 1,
     name: 'instructions_custom_view',
     title: 'Custom views',
     text: `Next you will see an example of a "real" custom view. You can define them in "03_custom_views_templates", and
-do whatever you want there. The only important thing is that you cann babe.findNextView() eventually and (if you want) 
-save the data with babe.trial_data.push(trial_data). Here, you will see a task, where you have to click on buttons until
+do whatever you want there. The only important thing is that you cann magpie.findNextView() eventually and (if you want) 
+save the data with magpie.trial_data.push(trial_data). Here, you will see a task, where you have to click on buttons until
 you click on the correct one.
 More information on the creation of custom views can be found <a href="here">here (fix link!)</a>.`
 });
 
-const instructions_post_test = babeViews.view_generator("instructions",{
+const instructions_post_test = magpieViews.view_generator("instructions",{
     trials: 1,
     name: 'instructions_post_test',
     title: 'Post Questionnaire',
@@ -234,7 +234,7 @@ const instructions_post_test = babeViews.view_generator("instructions",{
 });
 
 // In the post test questionnaire you can ask your participants addtional questions
-const post_test = babeViews.view_generator("post_test",{
+const post_test = magpieViews.view_generator("post_test",{
     trials: 1,
     name: 'post_test',
     // You can change much of what appears here, e.g., to present it in a different language, as follows:
@@ -255,11 +255,11 @@ const post_test = babeViews.view_generator("post_test",{
     comments_question: 'Weitere Kommentare'
 });
 
-const links = babeViews.view_generator("instructions",{
+const links = magpieViews.view_generator("instructions",{
     trials: 1,
     name: 'links',
     title: 'Further information',
-    text: `This was a short presentation of babe's funcionality.
+    text: `This was a short presentation of magpie's funcionality.
         <br />
         <br />
         This sample's file organisation:
@@ -283,28 +283,28 @@ const links = babeViews.view_generator("instructions",{
         Babe's documentation:
         <br />
         <br />
-        <a href='https://babe-project.github.io/babe-docs/'>Docs</a>
+        <a href='https://magpie-project.github.io/magpie-docs/'>Docs</a>
         <br />
-        <a href='https://babe-project.github.io/babe_site/index.html'>Site</a>
+        <a href='https://magpie-project.github.io/magpie_site/index.html'>Site</a>
         <br />
         <br />
         This sample ran in Debug mode. Next you will see a results table with your answers.`
 });
 
 // The 'thanks' view is crucial; never delete it; it submits the results!
-const thanks = babeViews.view_generator("thanks", {
+const thanks = magpieViews.view_generator("thanks", {
     trials: 1,
     name: 'thanks',
     title: 'Thank you for taking part in this experiment!',
     prolificConfirmText: 'Press the button'
 });
 
-/** trial (babe's Trial Type Views) below
+/** trial (magpie's Trial Type Views) below
 
 * Obligatory properties
 
     - trials: int - the number of trials this view will appear
-    - name: string - the name of the view type as it shall be known to _babe (e.g. for use with a progress bar)
+    - name: string - the name of the view type as it shall be known to _magpie (e.g. for use with a progress bar)
                      and the name of the trial as you want it to appear in the submitted data
     - data: array - an array of trial objects
 
@@ -313,17 +313,17 @@ const thanks = babeViews.view_generator("thanks", {
     - pause: number (in ms) - blank screen before the fixation point or stimulus show
     - fix_duration: number (in ms) - blank screen with fixation point in the middle
     - stim_duration: number (in ms) - for how long to have the stimulus on the screen
-        More about trial life cycle - https://github.com/babe-project/babe-project/blob/master/docs/views.md#trial-views-lifecycle
+        More about trial life cycle - https://github.com/magpie-project/magpie-project/blob/master/docs/views.md#trial-views-lifecycle
 
     - hook: object - option to hook and add custom functions to the view
-        More about hooks - https://github.com/babe-project/babe-project/blob/master/docs/views.md#trial-views-hooks
+        More about hooks - https://github.com/magpie-project/magpie-project/blob/master/docs/views.md#trial-views-hooks
 
-* All about the properties of trial - https://github.com/babe-project/babe-project/blob/master/docs/views.md#properties-of-trial
+* All about the properties of trial - https://github.com/magpie-project/magpie-project/blob/master/docs/views.md#properties-of-trial
 */
 
 
 // Here, we initialize a normal forced_choice view
-const forced_choice_2A = babeViews.view_generator("forced_choice", {
+const forced_choice_2A = magpieViews.view_generator("forced_choice", {
     // This will use all trials specified in `data`, you can user a smaller value (for testing), but not a larger value
     trials: part_one_trial_info.forced_choice.length, 
     // name should be identical to the variable name
@@ -333,7 +333,7 @@ const forced_choice_2A = babeViews.view_generator("forced_choice", {
 
 
 // Here, we initialize a normal keyPress task
-const key_press_practice = babeViews.view_generator("key_press",{
+const key_press_practice = magpieViews.view_generator("key_press",{
     trials: 2,
     name: 'key_press_practice',
     // We can also make use of the trial life cycles, e.g. to introduce a blank screen and a fixation point
@@ -370,31 +370,31 @@ const key_press_practice = babeViews.view_generator("key_press",{
           }}]
 });
 
-const key_press_main = babeViews.view_generator("key_press",{
+const key_press_main = magpieViews.view_generator("key_press",{
     trials: main_trials.keyPress.main.length,
     name: 'key_press_main',
     data: main_trials.keyPress.main,
 });
 
-const dropdown_choice = babeViews.view_generator("dropdown_choice",{
+const dropdown_choice = magpieViews.view_generator("dropdown_choice",{
     trials: 3,
     name: 'dropdown_choice',
     data: main_trials.dropdownChoice
 });
 
-const sentence_choice = babeViews.view_generator("sentence_choice", {
+const sentence_choice = magpieViews.view_generator("sentence_choice", {
     trials: 2,
     name: 'sentence_choice',
     data: main_trials.sentenceChoice
 });
 
-const image_selection = babeViews.view_generator("image_selection",{
+const image_selection = magpieViews.view_generator("image_selection",{
     trials: 2,
     name: 'image_selection',
     data: main_trials.imageSelection
 });
 
-const textbox_input = babeViews.view_generator("textbox_input",{
+const textbox_input = magpieViews.view_generator("textbox_input",{
     trials: 2,
     name: 'textbox_input',
     data: main_trials.textboxInput,
@@ -403,7 +403,7 @@ const textbox_input = babeViews.view_generator("textbox_input",{
 });
 
 // part of the trial flow sample
-const slider_rating = babeViews.view_generator("slider_rating",{
+const slider_rating = magpieViews.view_generator("slider_rating",{
     trials: 3,
     name: 'slider_rating',
     data: main_trials.sliderRating,
@@ -413,7 +413,7 @@ const slider_rating = babeViews.view_generator("slider_rating",{
 });
 
 // part of the hooks and custom events sample
-const rating_scale = babeViews.view_generator("rating_scale",{
+const rating_scale = magpieViews.view_generator("rating_scale",{
     trials: 2,
     name: 'rating_scale',
     data: main_trials.ratingScale,
@@ -425,7 +425,7 @@ const rating_scale = babeViews.view_generator("rating_scale",{
     }
 });
 
-const spr = babeViews.view_generator("self_paced_reading",{
+const spr = magpieViews.view_generator("self_paced_reading",{
     trials: 4,
     name: 'spr',
     data: main_trials.spr,
@@ -434,7 +434,7 @@ const spr = babeViews.view_generator("self_paced_reading",{
     stim_duration: 1000
 });
 
-const spr_rating_scale = babeViews.view_generator("self_paced_reading_rating_scale",{
+const spr_rating_scale = magpieViews.view_generator("self_paced_reading_rating_scale",{
     trials: 2,
     name: 'spr_rating_scale',
     data: main_trials.spr_rs,
@@ -443,7 +443,7 @@ const spr_rating_scale = babeViews.view_generator("self_paced_reading_rating_sca
 // Here we initialize a customized multi dropdown task,
 
 // using a custom view_template, answer_container_element and enable_response function
-const multi_dropdown = babeViews.view_generator("forced_choice",
+const multi_dropdown = magpieViews.view_generator("forced_choice",
     {trials: part_two_trial_info.multi_dropdown.length,
     title: "Complete the sentence",
     QUD: "Choose one option for each missing word in this sentence.",
@@ -461,7 +461,7 @@ const multi_dropdown = babeViews.view_generator("forced_choice",
 
 // Here, we initialize a forced_choice view with a custom view template
 // We added our custom css style custom-border, to the view template
-const forced_choice_custom_view_template = babeViews.view_generator(
+const forced_choice_custom_view_template = magpieViews.view_generator(
     "forced_choice",
     {
         // This will use all trials specified in `data`, you can user a smaller value (for testing), but not a larger value
@@ -472,12 +472,12 @@ const forced_choice_custom_view_template = babeViews.view_generator(
     },
     {
         stimulus_container_generator: function (config, CT) {
-            return `<div class='babe-view'>
-                    <h1 class='babe-view-title'>${config.title}</h1>
-                    <h1 class='babe-view-title custom-border'>Brand new <span style="color:darkred">silly title</span>!</h1>
-                    <p class='babe-view-question babe-view-qud'>${config.data[CT].QUD}</p>
-                    <div class='babe-view-stimulus-container'>
-                        <div class='babe-view-stimulus babe-nodisplay'></div>
+            return `<div class='magpie-view'>
+                    <h1 class='magpie-view-title'>${config.title}</h1>
+                    <h1 class='magpie-view-title custom-border'>Brand new <span style="color:darkred">silly title</span>!</h1>
+                    <p class='magpie-view-question magpie-view-qud'>${config.data[CT].QUD}</p>
+                    <div class='magpie-view-stimulus-container'>
+                        <div class='magpie-view-stimulus magpie-nodisplay'></div>
                     </div>
                     </div>`;
         }
@@ -486,7 +486,7 @@ const forced_choice_custom_view_template = babeViews.view_generator(
 
 // Here, we initialize a forced_choice view with a custom answer container
 // We added an additional title above the question
-const forced_choice_custom_answer_container = babeViews.view_generator(
+const forced_choice_custom_answer_container = magpieViews.view_generator(
     "forced_choice",
     {
         // This will use all trials specified in `data`, you can user a smaller value (for testing), but not a larger value
@@ -497,15 +497,15 @@ const forced_choice_custom_answer_container = babeViews.view_generator(
     },
     {
         answer_container_generator:  function (config, CT) {
-            return `<div class='babe-view-answer-container'>
-                    <h1 class='babe-view-title'>Question:</h1>
-                    <p class='babe-view-question'>${config.data[CT].question}</p>
-                    <label for='o1' class='babe-response-buttons'>${config.data[CT].option1}</label>
+            return `<div class='magpie-view-answer-container'>
+                    <h1 class='magpie-view-title'>Question:</h1>
+                    <p class='magpie-view-question'>${config.data[CT].question}</p>
+                    <label for='o1' class='magpie-response-buttons'>${config.data[CT].option1}</label>
                     <input type='radio' name='answer' id='o1' value=${config.data[CT].option1} />
                     <input type='radio' name='answer' id='o2' value=${config.data[CT].option2} />
-                    <label for='o2' class='babe-response-buttons'>${config.data[CT].option2}</label>
+                    <label for='o2' class='magpie-response-buttons'>${config.data[CT].option2}</label>
                     <input type='radio' name='answer' id='o3' value='A new third option!' />
-                    <label for='o3' class='babe-response-buttons'>A new third option!</label>
+                    <label for='o3' class='magpie-response-buttons'>A new third option!</label>
                 </div>`;
         }
     }
